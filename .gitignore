@@ -48,6 +48,8 @@ node_modules/
 *.sql.bak
 *.bak
 *.backup
+backups/*.sql
+backups/
 
 # Ficheiros temporários
 tmp/

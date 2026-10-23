@@ -1,0 +1,10 @@
+.env
+logs/*.log
+# Uploads dinâmicos (estrutura alinhada ao RetroVintagePT)
+assets/img/products/*
+!assets/img/products/.gitkeep
+assets/img/categories/*
+!assets/img/categories/.gitkeep
+# Pasta legada — migrar com: php site/tools/migrate_uploads_to_assets_img.php
+uploads/*
+!uploads/.gitkeep

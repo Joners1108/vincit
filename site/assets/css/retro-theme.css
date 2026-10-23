@@ -1,0 +1,687 @@
+/**
+ * Tema alinhado ao RetroVintagePT — carrega depois de style.css
+ * Tipografia Poppins/Inter, hero escuro tipo “sneaker drop”, cards claros, navegação limpa
+ */
+
+:root {
+    --font-display: 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --rv-bg-page: #fafafa;
+    --rv-card-border: #e5e7eb;
+    --rv-text-muted: #525252;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--rv-bg-page);
+    color: #171717;
+}
+
+/* --- Hero (sneaker-theme.css) --- */
+.hero {
+    background: linear-gradient(160deg, #0a0a0a 0%, #1a1a1a 50%, #252525 100%) !important;
+    color: #fff;
+    padding: 4.5rem 0 5rem;
+}
+
+.hero::before {
+    background:
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
+        repeating-linear-gradient(-12deg, transparent, transparent 40px, rgba(255, 255, 255, 0.02) 40px, rgba(255, 255, 255, 0.02) 41px) !important;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.25rem, 7vw, 3.75rem);
+    letter-spacing: 2px;
+    text-transform: none;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+    color: #ffffff !important;
+}
+
+.hero-content p {
+    color: #a3a3a3 !important;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.65;
+}
+
+.hero .btn-primary {
+    background: #fff !important;
+    color: #0a0a0a !important;
+    border-color: #fff !important;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.hero .btn-primary:hover {
+    background: transparent !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: none;
+}
+
+/* --- Títulos de secção --- */
+.section-title {
+    font-family: 'Poppins', var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: #0a0a0a;
+}
+
+.section-title::after {
+    background: #0a0a0a;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* --- Navegação principal (barra clara tipo loja RV) --- */
+.header-nav-bar {
+    background: #ffffff !important;
+    border-top: 1px solid #e5e7eb !important;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+.main-nav .nav-list > li > a {
+    color: #262626 !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+}
+
+.main-nav .nav-list > li > a:hover {
+    color: #0a0a0a !important;
+}
+
+.main-nav .dropdown {
+    background: #fff !important;
+    border: 1px solid var(--rv-card-border) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1) !important;
+}
+
+.main-nav .dropdown a {
+    color: #374151 !important;
+}
+
+/* --- Cartões de produto (products.css) --- */
+.products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    border-radius: 12px !important;
+    border: 1px solid var(--rv-card-border) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.2s !important;
+}
+
+.product-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1) !important;
+    border-color: #d1d5db !important;
+}
+
+.product-card .product-image {
+    aspect-ratio: 1 / 1;
+    background: #f5f5f5;
+}
+
+.product-card .product-info h3 {
+    font-family: 'Poppins', var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.product-card .product-info h3 a:hover {
+    color: #0a0a0a !important;
+}
+
+.product-card .add-to-cart-btn {
+    background: #0a0a0a !important;
+    color: #fff !important;
+    border: 1px solid #0a0a0a;
+}
+
+.product-card .add-to-cart-btn:hover {
+    background: #fff !important;
+    color: #0a0a0a !important;
+}
+
+.price,
+.product-card .price {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* --- Botões globais (fora do hero): contraste preto/branco estilo RV --- */
+.btn-primary {
+    background: #0a0a0a;
+    color: #fff;
+    border-color: #0a0a0a;
+}
+
+.btn-primary:hover {
+    background: #262626;
+    border-color: #262626;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #0a0a0a;
+    border: 2px solid #0a0a0a;
+}
+
+.btn-secondary:hover {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.btn-outline {
+    color: #0a0a0a;
+    border-color: #0a0a0a;
+}
+
+.btn-outline:hover {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* --- Categorias --- */
+.categories-section {
+    background: #fff !important;
+}
+
+.category-card {
+    border-radius: 12px !important;
+    border: 1px solid var(--rv-card-border) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+.category-card h3 {
+    font-family: 'Poppins', var(--font-display);
+    font-weight: 700;
+}
+
+/* --- Secções featured / latest --- */
+.featured-section,
+.latest-section {
+    background: transparent;
+}
+
+.latest-section {
+    background: #fafafa !important;
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.breadcrumb-list a:hover {
+    color: #0a0a0a;
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background: linear-gradient(180deg, #171717 0%, #0a0a0a 100%);
+    color: #d4d4d4;
+    border-top: none !important;
+}
+
+.main-footer .footer-section h3,
+.main-footer .footer-section h4 {
+    font-family: 'Poppins', var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.main-footer .footer-section h3 i {
+    margin-right: 0.45rem;
+    opacity: 0.9;
+    font-size: 0.95em;
+}
+
+.main-footer .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-footer .footer-links a i {
+    width: 1.1rem;
+    opacity: 0.85;
+    font-size: 0.85rem;
+}
+
+.main-footer .footer-links a:hover {
+    color: #fff !important;
+}
+
+/* --- Páginas política / guia --- */
+.policy-page,
+.guia-page {
+    padding: 2rem 0 4rem;
+    background: #fff;
+}
+
+.policy-container,
+.guia-container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.policy-page h1,
+.guia-page h1 {
+    font-family: 'Poppins', var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0a0a0a;
+    margin-bottom: 0.5rem;
+}
+
+.policy-updated {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.policy-block {
+    margin-bottom: 2rem;
+}
+
+.policy-block h2 {
+    font-family: 'Poppins', var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #111;
+}
+
+.policy-block p,
+.policy-block ul {
+    margin-bottom: 0.75rem;
+    line-height: 1.65;
+    color: #374151;
+}
+
+.policy-block ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+.policy-contact {
+    margin-top: 2rem;
+}
+
+.policy-contact a {
+    color: #0a0a0a;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.guia-intro {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.guia-table-wrap {
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.guia-table-wrap h2 {
+    font-family: 'Poppins', var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.guia-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.guia-table th,
+.guia-table td {
+    border: 1px solid #e5e7eb;
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.guia-table th {
+    background: #f9fafb;
+    font-weight: 600;
+}
+
+.guia-tip {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.55;
+}
+
+/* --- Ficha produto --- */
+.product-title {
+    font-family: 'Poppins', var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.product-section .tab-btn.active {
+    border-bottom-color: #0a0a0a;
+    color: #0a0a0a;
+}
+
+/* --- Logo header --- */
+.logo h1 {
+    font-family: 'Poppins', var(--font-display);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+/* --- Favoritos (header) --- */
+.favorites-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #171717;
+    text-decoration: none;
+    padding: 0.35rem;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.favorites-link:hover {
+    color: #b91c1c;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.wishlist-login-hint {
+    font-size: 0.95rem;
+    color: var(--rv-text-muted);
+}
+
+.wishlist-login-hint a {
+    font-weight: 600;
+    color: #0a0a0a;
+}
+
+/* --- Tamanhos (ficha produto) --- */
+.size-btn.is-out-of-stock {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.size-stock-pill {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.size-stock-pill--out {
+    color: #b91c1c;
+}
+
+.mini-cart-item-size {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0.2rem 0 0;
+}
+
+.cart-item-card__size {
+    font-size: 0.88rem;
+    color: #525252;
+    margin: 0.35rem 0 0;
+}
+
+.product-size-hint {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #b45309;
+}
+
+.product-no-sizes-msg {
+    padding: 0.75rem 1rem;
+    background: #fef3c7;
+    border-radius: 8px;
+    color: #92400e;
+    font-size: 0.95rem;
+}
+
+/* --- A minha conta (área cliente) --- */
+.account-section.account-page {
+    padding-top: 0.5rem;
+}
+
+.account-page-header {
+    margin-bottom: 1.75rem;
+}
+
+.account-page-title {
+    font-family: 'Poppins', var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 1.9rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #0a0a0a;
+    margin: 0 0 0.4rem;
+}
+
+.account-page-lead {
+    margin: 0;
+    color: var(--rv-text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.account-user {
+    background: linear-gradient(155deg, #0a0a0a 0%, #262626 100%) !important;
+    color: #fff !important;
+}
+
+.user-info__name {
+    font-family: 'Poppins', var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem;
+    color: #fff;
+}
+
+.user-info__email {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.72);
+    word-break: break-word;
+}
+
+.account-sidebar {
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.07);
+}
+
+.account-content {
+    box-shadow: 0 4px 28px rgba(0, 0, 0, 0.06);
+    padding: 1.75rem 1.35rem 2rem;
+}
+
+@media (min-width: 768px) {
+    .account-content {
+        padding: 2rem 2rem 2.25rem;
+    }
+}
+
+.account-tab__title {
+    font-family: 'Poppins', var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0 0 0.45rem;
+    color: #0a0a0a;
+}
+
+.account-tab__intro {
+    margin: 0 0 1.5rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.account-tab__intro strong {
+    color: #171717;
+    font-weight: 600;
+}
+
+.stat-card--link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.stat-card--link:hover {
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+}
+
+.stat-card__hint {
+    flex-basis: 100%;
+    margin-top: 0.65rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-card--address {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.stat-card--address .stat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.stat-address {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #171717;
+    line-height: 1.45;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label--strong {
+    display: block;
+    font-weight: 700 !important;
+    color: #171717 !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.stat-card__action {
+    margin-top: 0.65rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.stat-card__action:hover {
+    color: #b45309;
+}
+
+.recent-orders__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.65rem;
+}
+
+.recent-orders__head h3 {
+    margin: 0;
+    font-family: 'Poppins', var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0a0a0a;
+}
+
+.recent-orders__all {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #0a0a0a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.recent-orders__all:hover {
+    color: #b45309;
+}
+
+.orders-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -0.35rem;
+    padding: 0 0.35rem;
+}
+
+.account-empty {
+    text-align: center;
+    padding: 2rem 1.25rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px dashed #e5e7eb;
+}
+
+.account-empty p {
+    margin: 0 0 1rem;
+    color: #6b7280;
+}
+
+@media (max-width: 992px) {
+    .account-sidebar {
+        position: static;
+    }
+
+    .account-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .account-nav li {
+        flex: 1 1 auto;
+    }
+
+    .account-nav a {
+        border-left: none !important;
+        border-radius: 10px;
+        padding: 0.6rem 0.9rem !important;
+        background: #f3f4f6;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .account-nav a:hover,
+    .account-nav a.active {
+        background: #0a0a0a;
+        color: #fff !important;
+    }
+}

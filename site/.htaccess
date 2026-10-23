@@ -1,0 +1,153 @@
+# ============================================
+# VINCIT E-COMMERCE DE ROUPA
+# Ficheiro .htaccess
+# ============================================
+
+# Ativar reescrita de URLs
+RewriteEngine On
+
+# Base: omitir RewriteBase para o Apache usar a pasta deste .htaccess (funciona em qualquer caminho ou vhost).
+# Se as URLs "bonitas" falharem, define manualmente: RewriteBase /caminho/para/site/
+
+# ============================================
+# REGRAS DE REESCRITA
+# ============================================
+
+# Página inicial
+RewriteRule ^$ index.php [L]
+
+# Loja
+RewriteRule ^loja/?$ pages/shop.php [L]
+RewriteRule ^loja/homem/?$ pages/shop.php?gender=homem [L]
+RewriteRule ^loja/mulher/?$ pages/shop.php?gender=mulher [L]
+RewriteRule ^loja/categoria/([a-z0-9-]+)/?$ pages/shop.php?category=$1 [L]
+
+# Produto
+RewriteRule ^produto/([a-z0-9-]+)/?$ pages/product.php?slug=$1 [L]
+
+# Carrinho
+RewriteRule ^carrinho/?$ pages/cart.php [L]
+
+# Checkout
+RewriteRule ^checkout/?$ pages/checkout.php [L]
+
+# Conta
+RewriteRule ^conta/?$ pages/account.php [L]
+RewriteRule ^conta/encomenda/([0-9]+)/?$ pages/account_order.php?id=$1 [L]
+RewriteRule ^login/?$ pages/login.php [L]
+RewriteRule ^registo/?$ pages/register.php [L]
+RewriteRule ^logout/?$ pages/logout.php [L]
+RewriteRule ^recuperar-password/?$ pages/forgot_password.php [L]
+RewriteRule ^redefinir-password/?$ pages/reset_password.php [L,QSA]
+RewriteRule ^favoritos/?$ pages/favorites.php [L]
+
+# Páginas institucionais
+RewriteRule ^sobre/?$ pages/about.php [L]
+RewriteRule ^apoio/?$ pages/support.php [L]
+RewriteRule ^faq/?$ pages/faq.php [L]
+RewriteRule ^envio-devolucoes/?$ pages/shipping_returns.php [L]
+RewriteRule ^guia-tamanhos/?$ pages/size_guide.php [L]
+RewriteRule ^contacto/?$ pages/contact.php [L]
+RewriteRule ^politica-privacidade/?$ pages/privacy.php [L]
+RewriteRule ^termos-condicoes/?$ pages/terms.php [L]
+
+# Admin
+RewriteRule ^admin/?$ admin/dashboard/index.php [L]
+RewriteRule ^admin/dashboard/?$ admin/dashboard/index.php [L]
+RewriteRule ^admin/produtos/?$ admin/produtos/index.php [L]
+RewriteRule ^admin/produtos/novo/?$ admin/produtos/create.php [L]
+RewriteRule ^admin/produtos/editar/([0-9]+)/?$ admin/produtos/edit.php?id=$1 [L]
+RewriteRule ^admin/categorias/?$ admin/categorias/index.php [L]
+RewriteRule ^admin/categorias/nova/?$ admin/categorias/create.php [L]
+RewriteRule ^admin/categorias/editar/([0-9]+)/?$ admin/categorias/edit.php?id=$1 [L]
+RewriteRule ^admin/encomendas/?$ admin/encomendas/index.php [L]
+RewriteRule ^admin/encomendas/editar/([0-9]+)/?$ admin/encomendas/view.php?id=$1 [L]
+RewriteRule ^admin/encomendas/([0-9]+)/?$ admin/encomendas/view.php?id=$1 [L]
+RewriteRule ^admin/utilizadores/?$ admin/utilizadores/index.php [L]
+RewriteRule ^admin/utilizadores/([0-9]+)/?$ admin/utilizadores/view.php?id=$1 [L]
+RewriteRule ^admin/configuracoes/?$ admin/configuracoes/index.php [L]
+RewriteRule ^admin/pesquisa/?$ admin/pesquisa/index.php [L,QSA]
+
+# Pagamento Stripe (retorno)
+RewriteRule ^pagamento/sucesso/?$ pages/payment_success.php [L,QSA]
+RewriteRule ^pagamento/cancelar/?$ pages/payment_cancel.php [L,QSA]
+
+# API
+RewriteRule ^api/cart/?$ api/cart.php [L]
+RewriteRule ^api/cart/add/?$ api/cart.php?action=add [L]
+RewriteRule ^api/cart/update/?$ api/cart.php?action=update [L]
+RewriteRule ^api/cart/remove/?$ api/cart.php?action=remove [L]
+RewriteRule ^api/address-suggest/?$ api/address_suggest.php [L,QSA]
+RewriteRule ^api/stripe-webhook/?$ api/stripe_webhook.php [L]
+RewriteRule ^api/favorites/?$ api/favorites.php [L]
+# ============================================
+# CONFIGURAÇÕES DE CACHE
+# ============================================
+
+# Cache para ficheiros estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+</IfModule>
+
+# Compressão GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# ============================================
+# SEGURANÇA
+# ============================================
+
+# Desativar listagem de diretórios
+Options -Indexes
+
+# Proteger ficheiros sensíveis
+<FilesMatch "\.(sql|log|ini|conf)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Não servir .env
+<Files ".env">
+    Require all denied
+</Files>
+
+# Proteger config.php
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Proteger database.php
+<Files "database.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# ============================================
+# TRATAMENTO DE ERROS
+# ============================================
+
+# Erros (relativos ao DocumentRoot). Se o teu DocumentRoot for a pasta www/, comenta estas linhas.
+# ErrorDocument 404 /pages/404.php
+# ErrorDocument 500 /pages/500.php
+
+# ============================================
+# FIM DO FICHEIRO
+# ============================================

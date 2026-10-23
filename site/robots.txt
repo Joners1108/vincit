@@ -1,0 +1,86 @@
+# VINCIT E-COMMERCE DE ROUPA
+# Ficheiro robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: http://localhost/vincit/site/sitemap.xml
+
+# Diretórios permitidos
+Allow: /assets/
+# Imagens de produto/categoria: assets/img/products/ e assets/img/categories/ (coberto por /assets/)
+Allow: /uploads/
+Allow: /api/
+
+# Diretórios bloqueados
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config.php
+Disallow: /database.php
+Disallow: /install.php
+Disallow: /install_process.php
+Disallow: /logs/
+
+# Bloquear ficheiros sensíveis
+Disallow: *.sql
+Disallow: *.log
+Disallow: *.ini
+Disallow: *.conf
+
+# Bloquear parâmetros de query
+Disallow: /*?
+Disallow: /*&
+
+# Crawl-delay (opcional)
+Crawl-delay: 10
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Slurp (Yahoo)
+User-agent: Slurp
+Allow: /
+
+# DuckDuckBot
+User-agent: DuckDuckBot
+Allow: /
+
+# Baiduspider
+User-agent: Baiduspider
+Allow: /
+
+# YandexBot
+User-agent: YandexBot
+Allow: /
+
+# Facebookbot
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitterbot
+User-agent: Twitterbot
+Allow: /
+
+# LinkedInBot
+User-agent: LinkedInBot
+Allow: /
+
+# Pinterest
+User-agent: Pinterest
+Allow: /
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Telegram
+User-agent: Telegram
+Allow: /
+
+# Fim do ficheiro robots.txt

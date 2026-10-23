@@ -1,0 +1,465 @@
+# VINCIT E-COMMERCE DE ROUPA
+# Ficheiro .gitignore
+
+# Notas locais com passwords (não enviar para repositório)
+Contas e respecetivas passes.txt
+
+# Ficheiros de configuração sensíveis
+site/config.php
+site/database.php
+
+# Ficheiros de instalação
+site/install.php
+site/install_process.php
+site/installed.lock
+
+# Ficheiros de log
+site/logs/
+*.log
+
+# Ficheiros de upload
+site/uploads/*
+!site/uploads/.gitkeep
+
+# Ficheiros de sessão
+site/sessions/
+
+# Ficheiros de cache
+site/cache/
+*.cache
+
+# Ficheiros de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ficheiros de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ficheiros de dependências
+vendor/
+node_modules/
+
+# Ficheiros de backup
+*.sql.bak
+*.bak
+*.backup
+
+# Ficheiros temporários
+tmp/
+temp/
+*.tmp
+
+# Ficheiros de ambiente
+.env
+.env.local
+.env.production
+
+# Ficheiros de teste
+tests/coverage/
+tests/results/
+
+# Ficheiros de documentação gerada
+docs/api/
+docs/coverage/
+
+# Ficheiros de build
+build/
+dist/
+
+# Ficheiros de package manager
+package-lock.json
+yarn.lock
+composer.lock
+
+# Ficheiros de Docker
+docker-compose.yml
+Dockerfile
+
+# Ficheiros de CI/CD
+.gitlab-ci.yml
+.github/
+.travis.yml
+
+# Ficheiros de monitorização
+sentry.properties
+newrelic.ini
+
+# Ficheiros de backup de base de dados
+*.sql.gz
+*.sql.bz2
+*.sql.zip
+
+# Ficheiros de imagem grandes (manter apenas thumbnails)
+site/uploads/originals/
+
+# Ficheiros de vídeo
+*.mp4
+*.avi
+*.mov
+*.wmv
+
+# Ficheiros de áudio
+*.mp3
+*.wav
+*.ogg
+
+# Ficheiros de documento
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Ficheiros compactados
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+
+# Ficheiros executáveis
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ficheiros de banco de dados
+*.db
+*.sqlite
+*.sqlite3
+
+# Ficheiros de configuração de servidor
+.htaccess.bak
+web.config
+nginx.conf
+
+# Ficheiros de migração
+database/migrations/
+database/seeds/
+
+# Ficheiros de seeds
+seeds/
+
+# Ficheiros de fixtures
+fixtures/
+
+# Ficheiros de mock
+mocks/
+
+# Ficheiros de stub
+stubs/
+
+# Ficheiros de template
+templates/
+
+# Ficheiros de exemplo
+examples/
+
+# Ficheiros de demo
+demo/
+
+# Ficheiros de teste
+test/
+tests/
+spec/
+
+# Ficheiros de benchmark
+benchmark/
+bench/
+
+# Ficheiros de profiling
+profiling/
+profile/
+
+# Ficheiros de debug
+debug/
+
+# Ficheiros de desenvolvimento
+dev/
+development/
+
+# Ficheiros de produção
+production/
+prod/
+
+# Ficheiros de staging
+staging/
+
+# Ficheiros de homologação
+homologation/
+homolog/
+
+# Ficheiros de QA
+qa/
+
+# Ficheiros de UAT
+uat/
+
+# Ficheiros de integração
+integration/
+
+# Ficheiros de aceitação
+acceptance/
+
+# Ficheiros de regressão
+regression/
+
+# Ficheiros de performance
+performance/
+perf/
+
+# Ficheiros de carga
+load/
+
+# Ficheiros de stress
+stress/
+
+# Ficheiros de segurança
+security/
+
+# Ficheiros de auditoria
+audit/
+
+# Ficheiros de compliance
+compliance/
+
+# Ficheiros de governança
+governance/
+
+# Ficheiros de risco
+risk/
+
+# Ficheiros de qualidade
+quality/
+
+# Ficheiros de melhoria
+improvement/
+
+# Ficheiros de inovação
+innovation/
+
+# Ficheiros de investigação
+research/
+
+# Ficheiros de desenvolvimento
+development/
+
+# Ficheiros de protótipo
+prototype/
+
+# Ficheiros de MVP
+mvp/
+
+# Ficheiros de POC
+poc/
+
+# Ficheiros de spike
+spike/
+
+# Ficheiros de experimento
+experiment/
+
+# Ficheiros de análise
+analysis/
+
+# Ficheiros de design
+design/
+
+# Ficheiros de arquitetura
+architecture/
+
+# Ficheiros de infraestrutura
+infrastructure/
+
+# Ficheiros de operações
+operations/
+
+# Ficheiros de manutenção
+maintenance/
+
+# Ficheiros de suporte
+support/
+
+# Ficheiros de monitorização
+monitoring/
+
+# Ficheiros de alerta
+alerting/
+
+# Ficheiros de logging
+logging/
+
+# Ficheiros de tracing
+tracing/
+
+# Ficheiros de métricas
+metrics/
+
+# Ficheiros de dashboards
+dashboards/
+
+# Ficheiros de relatórios
+reports/
+
+# Ficheiros de análises
+analytics/
+
+# Ficheiros de business intelligence
+bi/
+
+# Ficheiros de data warehouse
+dw/
+
+# Ficheiros de ETL
+etl/
+
+# Ficheiros de ELT
+elt/
+
+# Ficheiros de data lake
+datalake/
+
+# Ficheiros de data mart
+datamart/
+
+# Ficheiros de data vault
+datavault/
+
+# Ficheiros de data mesh
+datamesh/
+
+# Ficheiros de data fabric
+datafabric/
+
+# Ficheiros de data governance
+datagovernance/
+
+# Ficheiros de data quality
+dataquality/
+
+# Ficheiros de data lineage
+datalineage/
+
+# Ficheiros de data catalog
+datacatalog/
+
+# Ficheiros de data dictionary
+datadictionary/
+
+# Ficheiros de data model
+datamodel/
+
+# Ficheiros de data schema
+dataschema/
+
+# Ficheiros de data structure
+datastructure/
+
+# Ficheiros de data format
+dataformat/
+
+# Ficheiros de data encoding
+dataencoding/
+
+# Ficheiros de data compression
+datacompression/
+
+# Ficheiros de data encryption
+dataencryption/
+
+# Ficheiros de data masking
+datamasking/
+
+# Ficheiros de data anonymization
+dataanonymization/
+
+# Ficheiros de data pseudonymization
+datapseudonymization/
+
+# Ficheiros de data tokenization
+datatokenization/
+
+# Ficheiros de data hashing
+datahashing/
+
+# Ficheiros de data salting
+datasalting/
+
+# Ficheiros de data keying
+datakeying/
+
+# Ficheiros de data signing
+datasigning/
+
+# Ficheiros de data verification
+dataverification/
+
+# Ficheiros de data validation
+datavalidation/
+
+# Ficheiros de data sanitization
+datasanitization/
+
+# Ficheiros de data cleansing
+datacleansing/
+
+# Ficheiros de data scrubbing
+datascrubbing/
+
+# Ficheiros de data deduplication
+datadeduplication/
+
+# Ficheiros de data normalization
+datanormalization/
+
+# Ficheiros de data standardization
+datastandardization/
+
+# Ficheiros de data transformation
+datatransformation/
+
+# Ficheiros de data conversion
+dataconversion/
+
+# Ficheiros de data migration
+datamigration/
+
+# Ficheiros de data integration
+dataintegration/
+
+# Ficheiros de data synchronization
+datasynchronization/
+
+# Ficheiros de data replication
+datareplication/
+
+# Ficheiros de data backup
+databackup/
+
+# Ficheiros de data recovery
+datarecovery/
+
+# Ficheiros de data archiving
+dataarchiving/
+
+# Ficheiros de data retention
+dataretention/
+
+# Ficheiros de data disposal
+datadisposal/
+
+# Ficheiros de data destruction
+datadestruction/
+
+# Ficheiros de data sanitization
+datasanitization/
+
+# Fim do ficheiro .gitignore

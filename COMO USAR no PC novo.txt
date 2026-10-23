@@ -1,0 +1,60 @@
+========================================================
+  VINCIT - COMO POR A CORRER NUM PC NOVO (PAP)
+========================================================
+
+REQUISITOS DO PC NOVO
+---------------------
+1) Ter o LARAGON instalado (o normal, com Apache + MySQL).
+   Download: https://laragon.org  (instalar e abrir uma vez)
+
+PASSOS (2 minutos)
+------------------
+1) Copiar a pasta "vincit" INTEIRA para dentro de:
+        C:\laragon\www\
+   Deve ficar exatamente assim:
+        C:\laragon\www\vincit\
+
+   (A pasta TEM de ficar aqui. O ARRANCAR.bat avisa se estiver no sitio errado.)
+
+2) Entrar em  C:\laragon\www\vincit  e fazer DUPLO-CLIQUE em:
+        ARRANCAR.bat
+
+3) No menu, carregar  1  e Enter.
+   Ele sozinho:
+     - arranca o Apache e o MySQL
+     - cria e enche a base de dados (so na 1a vez)
+     - abre o site no browser
+
+   Pronto. Site:  http://localhost/vincit/site
+
+CONTAS
+------
+  Admin do site:  http://localhost/vincit/site/admin
+      email: admin@vincit.pt
+      pass : admin
+
+MENU DO ARRANCAR.bat
+--------------------
+  [1] Arrancar tudo e abrir o site   <- usar este
+  [2] Abrir o Laragon (janela)
+  [3] Abrir so o site no browser
+  [4] Guardar a base de dados (snapshot)  <- ver nota abaixo
+  [5] Repor base de dados de raiz
+  [6] Ver estado (Apache / MySQL)
+  [0] Sair
+
+SE FIZERES ALTERACOES E QUISERES LEVAR PARA OUTRO PC
+----------------------------------------------------
+  Depois de editares produtos/dados no admin, corre a opcao [4]
+  (Guardar a base de dados). Isso grava tudo em
+  backups\vincit_db.sql, que viaja com a pasta.
+
+NOTAS
+-----
+  - A pasta ja traz as fotos dos produtos (site\assets\img\products),
+    por isso nao e preciso internet para as imagens.
+  - O ficheiro videoinstalacao.mp4 (grande) NAO e preciso para o site
+    funcionar - podes nao o copiar se quiseres poupar espaco.
+  - Se o site nao abrir: confirma que a pasta esta em C:\laragon\www\vincit
+    e que o Laragon esta instalado.
+========================================================

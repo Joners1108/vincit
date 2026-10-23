@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página Inicial -->
+    <url>
+        <loc>http://localhost/vincit/site/</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Loja -->
+    <url>
+        <loc>http://localhost/vincit/site/loja</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Loja Homem -->
+    <url>
+        <loc>http://localhost/vincit/site/loja/homem</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Loja Mulher -->
+    <url>
+        <loc>http://localhost/vincit/site/loja/mulher</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Categorias -->
+    <url>
+        <loc>http://localhost/vincit/site/loja/categoria/camisolas</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/loja/categoria/calcas</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/loja/categoria/sapatos</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/loja/categoria/acessorios</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Páginas Institucionais -->
+    <url>
+        <loc>http://localhost/vincit/site/sobre</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/apoio</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/faq</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/envio-devolucoes</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/guia-tamanhos</loc>
+        <lastmod>2026-04-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/contacto</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Conta -->
+    <url>
+        <loc>http://localhost/vincit/site/login</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/registo</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Carrinho -->
+    <url>
+        <loc>http://localhost/vincit/site/carrinho</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <!-- Legal -->
+    <url>
+        <loc>http://localhost/vincit/site/politica-privacidade</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>http://localhost/vincit/site/termos-condicoes</loc>
+        <lastmod>2026-03-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>
